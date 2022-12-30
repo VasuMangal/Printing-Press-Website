@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>VASU PRINTERS</title>
+    <link rel="stylesheet" href="main.css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+ 
+
+  <style>
+    body {
+       background-color: rgb(255, 255, 255);
+    }
+
+    style>
+.dropbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+</style>
+
+
+
+ <header class="text-gray-600 body-font ">
+  
+  <div class="container mx-auto flex flex-wrap p-3 flex-col md:flex-row items-center">
+    <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0" a href="index.html">
+      <img src="images/flex.png" alt="CSGO Howl" style="float:left" width="200" height="200">
+      
+    </a>
+    <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+      <a href="index.html" class="mr-3 hover:text-gray-900">HOME</a>
+      <a href="about.html" class="mr-3 hover:text-gray-900">ABOUT</a>
+      <div class="dropdown" style="float:left;">
+        <button class="dropbtn">PRODUCTS &nbsp;</button>
+        <div class="dropdown-content" style="left:0;">
+          <a href="products.html">ALL PRODUCTS</a>
+          <a href="business.html">BUSINESS CARDS</a>
+          <a href="flex.html">FLEX PRINTING</a>
+          <a href="pen.html">PEN PRINTING</a>
+          <a href="cards.html">WEDDING CARDS</a>
+          <a href="box.html">WEDDING BOXES</a>
+          <a href="books.html">BILL BOOKS</a>
+          <a href="pamphlets.html">PAMPHLETS</a>
+          <a href="id.html">ID CARDS</a>
+          
+        </div>
+      </div>
+      
+      <a href="contact.html" class="mr-3 hover:text-gray-900">CONTACT US</a>
+    </nav>
+    
+  </div>
+ </header>
+ <hr>
+
+
+ <br>
+
+
+ <style>
+  header {
+    background-image: url('hand.jpg');
+    background-repeat: no-repeat;
+    background-attachment:local;
+    background-size: 100% 100%;
+  }
+  </style>
+   <style>
+    footer {
+      background-image: url('hand.jpg');
+      background-repeat: no-repeat;
+      background-attachment:local;
+      background-size: 100% 100%;
+    }
+    </style>
+    
+      <br>
+ <div class="img-slider">
+  <div class="slide active">
+    <img src="1.jpg" alt="">
+    <div class="info">
+ <h2>WE PRINT WHAT YOU WANT</h2>
+      
+    </div>
+  </div>
+  <div class="slide">
+    <img src="2.jpg" alt="">
+    <div class="info">
+      <h2>HIGH QUALITY FLEX PRINTING</h2>
+    </div>
+  </div>
+  <div class="slide">
+    <img src="3.jpg" alt="">
+    <div class="info">
+      <h2>PREMIUM WEDDING BOXES</h2>
+    </div>
+  </div>
+  <div class="slide">
+    <img src="4.jpg" alt="">
+    <div class="info">
+      <h2>PREMIUM WEDDING CARDS</h2>
+      
+    </div>
+  </div>
+  <div class="slide">
+    <img src="5.jpg" alt="">
+    <div class="info">
+      <h2>T-SHIRT PRINTING SOON</h2>
+      
+    </div>
+  </div>
+  <div class="navigation">
+    <div class="btn active"></div>
+    <div class="btn"></div>
+    <div class="btn"></div>
+    <div class="btn"></div>
+    <div class="btn"></div>
+  </div>
+ </div>
+
+ <script type="text/javascript">
+ var slides = document.querySelectorAll('.slide');
+ var btns = document.querySelectorAll('.btn');
+ let currentSlide = 1;
+
+ // Javascript for image slider manual navigation
+ var manualNav = function(manual){
+  slides.forEach((slide) => {
+    slide.classList.remove('active');
+
+    btns.forEach((btn) => {
+      btn.classList.remove('active');
+    });
+  });
+
+  slides[manual].classList.add('active');
+  btns[manual].classList.add('active');
+ }
+
+ btns.forEach((btn, i) => {
+  btn.addEventListener("click", () => {
+    manualNav(i);
+    currentSlide = i;
+  });
+ });
+
+ // Javascript for image slider autoplay navigation
+ var repeat = function(activeClass){
+  let active = document.getElementsByClassName('active');
+  let i = 1;
+
+  var repeater = () => {
+    setTimeout(function(){
+      [...active].forEach((activeSlide) => {
+        activeSlide.classList.remove('active');
+      });
+
+    slides[i].classList.add('active');
+    btns[i].classList.add('active');
+    i++;
+
+    if(slides.length == i){
+      i = 0;
+    }
+    if(i >= slides.length){
+      return;
+    }
+    repeater();
+  }, 10000);
+  }
+  repeater();
+ }
+ repeat();
+ </script>
+ <script>
+ function myFunction() {
+ var x = document.getElementById("myTopnav");
+ if (x.className === "topnav") {
+ x.className += " responsive";
+ } else {
+ x.className = "topnav";
+ }
+ }
+ </script>
+
+
+
+
+
+<section class="text-gray-600 body-font">
+  <div class="container px-5 py-5 mx-auto">
+    <div class="flex flex-col text-center w-full mb-20">
+      <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">NEW RAMPURA PRINTING PRESS</h1>
+      <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Here We Provide You Wide Range Of Printing Services And Products <br>Some Of Our Superior Products Are Listed Below. </p>
+    </div>
+    <div class="flex flex-wrap -m-4">
+      <div class="lg:w-1/3 sm:w-1/2 p-4">
+        <div class="flex relative">
+          <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="images/fold.jpg">
+          <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+            <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">PREMIUM</h2>
+            <h1 class="title-font text-lg font-medium text-gray-900 mb-3">THREE FOLD BROCHURE</h1>
+            <p class="leading-relaxed">We Provide Best Quality Three Fold Brochure For Business Use.</p>
+          </div>
+        </div>
+      </div>
+      <div class="lg:w-1/3 sm:w-1/2 p-4">
+        <div class="flex relative">
+          <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="images/card1.jpg">
+          <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+            <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">HIGH THICKNESS</h2>
+            <h1 class="title-font text-lg font-medium text-gray-900 mb-3">BUSINESS CARDS</h1>
+            <p class="leading-relaxed">We Print Premium Business Card Of Many Types Die Cutting Business Cards, PVC Business Cards.</p>
+          </div>
+        </div>
+      </div>
+      <div class="lg:w-1/3 sm:w-1/2 p-4">
+        <div class="flex relative">
+          <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="images/header.jpg">
+          <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+            <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">COMING SOON</h2>
+            <h1 class="title-font text-lg font-medium text-gray-900 mb-3">MUG PRINTING</h1>
+            <p class="leading-relaxed">Printed Mugs For Corporate Gifting, Birthday & Love Gifts.</p>
+          </div>
+        </div>
+      </div>
+      <div class="lg:w-1/3 sm:w-1/2 p-4">
+        <div class="flex relative">
+          <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="images/diwali.jpg">
+          <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+            <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">FABULOUS LOOKING</h2>
+            <h1 class="title-font text-lg font-medium text-gray-900 mb-3">SOCIAL MEDIA POST DESIGNING</h1>
+            <p class="leading-relaxed">Creative Social Media Post Designing For Festivals, Promotions Etc.</p>
+          </div>
+        </div>
+      </div>
+      <div class="lg:w-1/3 sm:w-1/2 p-4">
+        <div class="flex relative">
+          <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="images/tshirt.jpg">
+          <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+            <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">COMING SOON</h2>
+            <h1 class="title-font text-lg font-medium text-gray-900 mb-3">T-SHIRT PRINTING</h1>
+            <p class="leading-relaxed">Attractive Printed T-shirts For Your Business Promotion.</p>
+          </div>
+        </div>
+      </div>
+      <div class="lg:w-1/3 sm:w-1/2 p-4">
+        <div class="flex relative">
+          <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="images/store.jpg">
+          <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+            <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">ATTRACTIVE</h2>
+            <h1 class="title-font text-lg font-medium text-gray-900 mb-3">BANNER PRINTING</h1>
+            <p class="leading-relaxed">We Are One Of The Renowned Service Providers Engaged In Rendering Services For Flex Printing.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<br>
+ 
+<footer class="text-black-600 body-font">
+  <div class="container px-5 py-4 mx-auto flex items-center sm:flex-row flex-col">
+    <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900"a href="index.html">
+      <img src="images/logo.png" alt="CSGO Howl" style="float:left" width="60" height="60">
+      
+    </a>
+    <a href="contact.html"><p class="text-sm text-black-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-black-200 sm:py-2 sm:mt-0 mt-4">NEW RAMPURA PRINTING PRESS [Rampura Phul-151103] (Punjab-India)
+    </p></a>
+    <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+
+      <a class="text-gray-500" href="https://www.facebook.com/newrampurapress">
+        <svg fill="red" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+          <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+        </svg>
+      </a>
+     
+      <a class="ml-3 text-gray-500" href="https://www.instagram.com/newrampurapress/?igshid=NTdlMDg3MTY%3D">
+        <svg fill="none" stroke="red" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+          <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+          <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+        </svg>
+      </a>
+      
+    </span>
+  </div>
+ </footer>
+
+
+</body>
+</html>
